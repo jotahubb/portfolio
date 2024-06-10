@@ -14,6 +14,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
 
 .cabecalho__menu__link {
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
@@ -46,10 +47,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -58,7 +60,7 @@ body {
 
 .apresentacao__conteudo__titulo {
     font-family: var(--fonte-primaria);
-    font-size: 36px;
+    font-size: 2.25rem;
 
 }
 
@@ -69,7 +71,7 @@ body {
 
 .apresentacao__conteudo__texto {
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
 
 }
 
@@ -85,18 +87,18 @@ body {
 .apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-.apresentacao__links__link {
+.apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -117,8 +119,7 @@ body {
 }
 
 .apresentacao__foto {
-    width: 467.705px;
-    height: 532px;
+    width: 50%;
     flex-shrink: 0;
     border-radius: 16px;
     border: 3px solid var(--cor-terciaria);
@@ -130,5 +131,43 @@ body {
     padding: 28px;
     color: var(--cor-primaria);
     font-family: var(--fonte-secundaria);
-    font-size: 28px;   
+    font-size: 1.75rem;   
+}
+
+form input,
+form textarea,
+form button 
+{
+    display: block;
+    margin-bottom: 8px;
+    width: 320px;
+    padding: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+form button {
+    background-color: #333333;
+    border: solid 1px #FFFFFF;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10px;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
 }
